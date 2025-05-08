@@ -7,7 +7,10 @@ x = np.cos(t)
 y = np.sin(t)
 z = t / 2
 
-traj = np.column_stack((x, y, z))
+traj = np.zeros((100, 3), dtype=np.float64)
+traj[:, 0] = x
+traj[:, 1] = y
+traj[:, 2] = z
 
 print("Trajectory shape: ", traj.shape)
 print("Time shape: ", t.shape)
